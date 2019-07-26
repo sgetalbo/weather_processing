@@ -44,7 +44,7 @@ read_dates <- function(lat, lon, start, end) {
 if(file.exists("data/obs_5yr.rds")) {
   obs_5yr <- readRDS("data/obs_5yr.rds")
 } else {
-  obs_5yr <- pmap(list(postcode$lat, postcode$lon, "2013-01-01", "2018-01-08"), read_dates)
+  obs_5yr <- pmap(list(postcode$lat, postcode$lon, "2015-01-04", "2019-01-03"), read_dates)
   saveRDS(obs_5yr, file = "data/obs_5yr.rds")
 }
 
